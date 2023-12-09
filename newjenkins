@@ -1,0 +1,21 @@
+pipeline {
+    agent any 
+    stages {
+        stage('code analaysis') {
+            steps{
+            sh'echo "sonar running"'}
+        }
+        stage('code tetsing'){
+            steps{
+            sh'echo "testing"'}
+        }
+        stage('build'){
+            steps{
+            sh'echo "building application"'}
+        }
+        stage('deploy'){
+            steps{
+            sh'echo "application deployed to prod server"'}
+        }
+    }
+}
